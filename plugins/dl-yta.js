@@ -5,8 +5,8 @@ import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper';
 let limit = 50 
 
 let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
-  if (!args || !args[0]) throw `🤖 Ejemplo :\n${usedPrefix + command} https://youtu.be/9Rnsv_gUWuI`
-  if (!args[0].match(/youtu/gi)) throw `📵 Verifica que el link de YouTube`
+  if (!args || !args[0]) throw `🤖 Ejemplo :\n${usedPrefix + command} https://youtu.be/xAUaEfzt_VU`
+  if (!args[0].match(/youtu/gi)) throw `📵 Verifica el link de YouTube, PELOTUDO`
    m.react(rwait)
  let chat = global.db.data.chats[m.chat]
   const isY = /y(es)/gi.test(args[1])
@@ -30,7 +30,7 @@ let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, comman
       lastError = e
     }
   }
-  if ((!(source instanceof ArrayBuffer) || !link || !res.ok) && !isLimit) throw '📵 Error: ' + (lastError || 'no puedo descargar el audio')
+  if ((!(source instanceof ArrayBuffer) || !link || !res.ok) && !isLimit) throw '📵 Error: ' + (lastError || 'Lo siento, no descargo audios a pobrezolanos')
 
 if (!isLimit) await conn.sendMessage(m.chat, { document: { url: link}, mimetype: 'audio/mpeg', fileName: title + '.mp3'}, {quoted: m})
 
