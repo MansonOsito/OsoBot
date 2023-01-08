@@ -1,7 +1,7 @@
 
 let handler = async (m, { conn, usedPrefix, command }) => {
 	
-if (!m.quoted) throw `🧑🏻‍💻 Tiqueta el mensaje para eliminar`
+if (!m.quoted) throw `🧑🏻‍💻 Pero etiqueta el mensaje para eliminar, pues CACHUDO`
 try {
 let delet = m.message.extendedTextMessage.contextInfo.participant
 let bang = m.message.extendedTextMessage.contextInfo.stanzaId
