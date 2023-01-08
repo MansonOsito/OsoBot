@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || q.mediaType || ''
     if (/webp|image|video/g.test(mime)) {
-      if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply('🧑🏻‍💻 Máximo 10 segundos')
+      if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply('🧑🏻‍💻 Un video o gif de máximo 10 segundos, POBREZOLANO PELOTUDO')
       let img = await q.download?.()
       if (!img) throw `🧑🏻‍💻️ Responde a una imagen o video con${usedPrefix + command}`
       let out
@@ -38,7 +38,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!stiker) stiker = e
   } finally {
     if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m, null, rpl)
-    else throw '🧑🏻‍💻 La conversión ha fallado, intenta enviar primero imagen/video/gif y luego responde con el comando'
+    else throw '🧑🏻‍💻 A veces no funciona con los pobrezolanos, intenta enviar primero imagen/video/gif y luego responde con el comando'
   }
 }
 handler.help = ['sticker']
