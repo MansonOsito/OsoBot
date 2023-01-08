@@ -4,7 +4,7 @@ let handler = async (m, { conn}) => {
 let name = conn.getName(m.sender)
 let av = `./src/mp3/${pickRandom(["bot", "bott"])}.mp3`
 
-conn.sendButton(m.chat, `Hola 👋🏻 soy turbito bot 🧑🏻‍💻 ${name} \n \nClick en las siguientes opciones pará ver mis comandos 👇🏻 🤖 \n`, igfg, null, [
+conn.sendButton(m.chat, `Hola cachudo👋🏻 soy OsoBot🐻 ${name} \n \nClick en las siguientes opciones pará ver mis comandos 👇🏻 🤖 \n`, igfg, null, [
       ['⦙☰ Menu', '/help'],
       ['⦙☰ Menu 2', '/menu2'],
       ['⌬ Grupos', '/gpturbo']
