@@ -6,7 +6,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     m.react(rwait)
     let res = await instagramGetUrl(args[0])
     for (let result of res.url_list) {
-    conn.sendFile(m.chat, result, 'igdl.mp4', `🧑🏻‍💻 Resultado`, m)
+    conn.sendFile(m.chat, result, 'igdl.mp4', `🧑🏻‍💻 Ya está tu video, don fastidiOso`, m)
     m.react(done)
   }
 }
